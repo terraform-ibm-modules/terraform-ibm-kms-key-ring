@@ -60,7 +60,8 @@
       "pos": {
         "filename": "outputs.tf",
         "line": 5
-      }
+      },
+      "type": "TypeString"
     }
   },
   "required_core": [
