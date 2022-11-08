@@ -1,12 +1,98 @@
 {
   "path": ".",
-  "variables": {},
-  "outputs": {},
+  "variables": {
+    "endpoint_type": {
+      "name": "endpoint_type",
+      "type": "string",
+      "description": "The type of endpoint to be used for creating keys, accepts 'public' or 'private'",
+      "default": "public",
+      "source": [
+        "ibm_kms_key_rings.key_ring.endpoint_type"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 5
+      },
+      "immutable": true,
+      "computed": true
+    },
+    "instance_id": {
+      "name": "instance_id",
+      "type": "string",
+      "description": "The Key Protect instance GUID",
+      "required": true,
+      "source": [
+        "ibm_kms_key_rings.key_ring.instance_id"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 11
+      },
+      "cloud_data_type": "resource_instance",
+      "immutable": true,
+      "cloud_data_range": [
+        "service:kms|hs-crypto"
+      ]
+    },
+    "key_ring_id": {
+      "name": "key_ring_id",
+      "type": "string",
+      "description": "The ID that identifies the Key Ring, each ID is unique within the given Key Protect instance but is not reserved across the Key Protect service",
+      "required": true,
+      "source": [
+        "ibm_kms_key_rings.key_ring.key_ring_id"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 16
+      },
+      "immutable": true,
+      "min_length": 2,
+      "max_length": 100,
+      "matches": "^[a-zA-Z0-9-]*$"
+    }
+  },
+  "outputs": {
+    "key_ring_id": {
+      "name": "key_ring_id",
+      "description": "ID of the Key Ring",
+      "value": "ibm_kms_key_rings.key_ring.key_ring_id",
+      "pos": {
+        "filename": "outputs.tf",
+        "line": 5
+      }
+    }
+  },
   "required_core": [
     "\u003e= 1.0.0"
   ],
-  "required_providers": {},
-  "managed_resources": {},
+  "required_providers": {
+    "ibm": {
+      "source": "IBM-Cloud/ibm",
+      "version_constraints": [
+        "\u003e= 1.45.0"
+      ]
+    }
+  },
+  "managed_resources": {
+    "ibm_kms_key_rings.key_ring": {
+      "mode": "managed",
+      "type": "ibm_kms_key_rings",
+      "name": "key_ring",
+      "attributes": {
+        "endpoint_type": "endpoint_type",
+        "instance_id": "instance_id",
+        "key_ring_id": "key_ring_id"
+      },
+      "provider": {
+        "name": "ibm"
+      },
+      "pos": {
+        "filename": "main.tf",
+        "line": 5
+      }
+    }
+  },
   "data_resources": {},
   "module_calls": {}
 }
