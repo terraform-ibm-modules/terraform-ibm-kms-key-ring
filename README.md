@@ -1,7 +1,7 @@
 <!-- BEGIN MODULE HOOK -->
 
 <!-- Update the title to match the module name and add a description -->
-# Terraform IBM -key-protect-key-ring
+# Terraform IBM Key Protect Key Ring Module
 <!-- UPDATE BADGE: Update the link for the following badge-->
 [![Stable (With Quality Checks)](https://img.shields.io/badge/Status-Stable%20(With%20quality%20checks)-green?style=plastic)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
 [![Build status](https://github.com/terraform-ibm-modules/terraform-ibm-key-protect-key-ring/actions/workflows/ci.yml/badge.svg)](https://github.com/terraform-ibm-modules/terraform-ibm-key-protect-key-ring/actions/workflows/ci.yml)
