@@ -27,6 +27,8 @@ func TestRunDefaultExample(t *testing.T) {
 }
 
 func TestRunUpgradeExample(t *testing.T) {
+	// TODO: Remove skip after first release
+	t.Skip()
 	t.Parallel()
 
 	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
