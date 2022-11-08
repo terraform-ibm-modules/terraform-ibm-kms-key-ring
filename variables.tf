@@ -5,7 +5,11 @@
 variable "endpoint_type" {
   type        = string
   description = "The type of endpoint to be used for creating keys, accepts 'public' or 'private'"
-  default     = "public"
+  default     = "private"
+  validation {
+    condition     = can(regex("public|private", var.endpoint_type))
+    error_message = "The endpoint_type value must be 'public' or 'private'."
+  }
 }
 
 variable "instance_id" {

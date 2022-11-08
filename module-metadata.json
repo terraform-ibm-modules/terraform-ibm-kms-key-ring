@@ -5,7 +5,7 @@
       "name": "endpoint_type",
       "type": "string",
       "description": "The type of endpoint to be used for creating keys, accepts 'public' or 'private'",
-      "default": "public",
+      "default": "private",
       "source": [
         "ibm_kms_key_rings.key_ring.endpoint_type"
       ],
@@ -26,7 +26,7 @@
       ],
       "pos": {
         "filename": "variables.tf",
-        "line": 11
+        "line": 15
       },
       "cloud_data_type": "resource_instance",
       "immutable": true,
@@ -44,7 +44,7 @@
       ],
       "pos": {
         "filename": "variables.tf",
-        "line": 16
+        "line": 20
       },
       "immutable": true,
       "min_length": 2,
