@@ -7,13 +7,13 @@ variable "ibmcloud_api_key" {
 variable "region" {
   type        = string
   description = "Region to provision all resources created by this example"
-  default     = "us-south"
+  default     = "eu-gb"
 }
 
 variable "prefix" {
   type        = string
   description = "Prefix to append to all resources created by this example"
-  default     = "terraform"
+  default     = "example-kpkr"
 }
 
 variable "resource_group" {

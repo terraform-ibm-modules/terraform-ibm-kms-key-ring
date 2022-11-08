@@ -2,9 +2,9 @@
 # Outputs
 ##############################################################################
 
-#output "myoutput" {
-#  description = "Description of my output"
-#  value       = "value"
-#}
+output "key_ring_id" {
+  value       = ibm_kms_key_rings.key_ring.key_ring_id
+  description = "ID of the Key Ring"
+}
 
 ##############################################################################
