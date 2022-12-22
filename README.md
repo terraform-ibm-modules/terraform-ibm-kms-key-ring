@@ -66,7 +66,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The type of endpoint to be used for creating keys. Accepts 'public' or 'private' | `string` | `"private"` | no |
+| <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The type of endpoint to be used for creating keys. Accepts 'public' or 'private' | `string` | `"public"` | no |
 | <a name="input_instance_id"></a> [instance\_id](#input\_instance\_id) | The Key Protect instance GUID | `string` | n/a | yes |
 | <a name="input_key_ring_id"></a> [key\_ring\_id](#input\_key\_ring\_id) | The ID that identifies the Key Ring. Each ID is unique within the given Key Protect instance but is not reserved across the Key Protect service | `string` | n/a | yes |
 

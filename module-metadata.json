@@ -5,7 +5,7 @@
       "name": "endpoint_type",
       "type": "string",
       "description": "The type of endpoint to be used for creating keys. Accepts 'public' or 'private'",
-      "default": "private",
+      "default": "public",
       "source": [
         "ibm_kms_key_rings.key_ring.endpoint_type"
       ],
