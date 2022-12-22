@@ -7,7 +7,7 @@
 [![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-key-protect-key-ring?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-key-protect-key-ring/releases/latest)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
-This module creates a key ring to help organize keys in a Key Protect instance.  
+This module creates a key ring to help organize keys in a Key Protect instance.
 For more information, about key management rings, see [creating key rings](https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api).
 
 ## Usage
