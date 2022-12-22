@@ -1,30 +1,28 @@
-<!-- BEGIN MODULE HOOK -->
-
-<!-- Update the title to match the module name and add a description -->
 # Key Protect key ring module
-<!-- UPDATE BADGE: Update the link for the following badge-->
+
 [![Stable (With Quality Checks)](https://img.shields.io/badge/Status-Stable%20(With%20quality%20checks)-green?style=plastic)](https://terraform-ibm-modules.github.io/documentation/#/badge-status)
 [![Build status](https://github.com/terraform-ibm-modules/terraform-ibm-key-protect-key-ring/actions/workflows/ci.yml/badge.svg)](https://github.com/terraform-ibm-modules/terraform-ibm-key-protect-key-ring/actions/workflows/ci.yml)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-key-protect-key-ring?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-key-protect-key-ring/releases/latest)
+[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
 This module creates a key ring to help organize keys in a Key Protect instance.
+For more information, about key management rings, see [creating key rings](https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api).
 
 ## Usage
-
-<!-- Add sample usage of the module itself in the following code block -->
 ```hcl
-##############################################################################
-# Key Protect Key Ring
-##############################################################################
+provider "ibm" {
+  ibmcloud_api_key = "XXXXXXXXXX"
+  # Must be the same region the Key Protect instance is in
+  region           = "us-south"
+}
 
-# Replace "main" with a GIT release version to lock into a specific release
-module "key_protect_module" {
+module "key_protect_key_ring" {
+  # Replace "main" with a GIT release version to lock into a specific release
   source        = "git::https://github.com:terraform-ibm-modules/terraform-ibm-key-protect-key-ring.git?ref=main"
-  endpoint_type = var.endpoint_type
-  instance_id   = var.instance_id
-  key_ring_id   = "${var.prefix}-key-ring"
+  instance_id   = "XXxxXXxx-xxxx-XXXX-xxxx-XXxxXXxx"
+  key_ring_id   = "my-key-ring"
 }
 ```
 
@@ -68,9 +66,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The type of endpoint to be used for creating keys, accepts 'public' or 'private' | `string` | `"private"` | no |
+| <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The type of endpoint to be used for creating keys. Accepts 'public' or 'private' | `string` | `"public"` | no |
 | <a name="input_instance_id"></a> [instance\_id](#input\_instance\_id) | The Key Protect instance GUID | `string` | n/a | yes |
-| <a name="input_key_ring_id"></a> [key\_ring\_id](#input\_key\_ring\_id) | The ID that identifies the Key Ring, each ID is unique within the given Key Protect instance but is not reserved across the Key Protect service | `string` | n/a | yes |
+| <a name="input_key_ring_id"></a> [key\_ring\_id](#input\_key\_ring\_id) | The ID that identifies the Key Ring. Each ID is unique within the given Key Protect instance but is not reserved across the Key Protect service | `string` | n/a | yes |
 
 ## Outputs
 

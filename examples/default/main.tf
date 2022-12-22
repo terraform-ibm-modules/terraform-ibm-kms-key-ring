@@ -10,14 +10,15 @@ module "resource_group" {
 }
 
 ##############################################################################
-# Key Protect module
+# Key Protect instance
 ##############################################################################
 
-module "key_protect_module" {
-  source            = "git::https://github.com/terraform-ibm-modules/terraform-ibm-key-protect.git?ref=v1.2.0"
-  key_protect_name  = "${var.prefix}-kp"
+resource "ibm_resource_instance" "key_protect_instance" {
+  name              = "${var.prefix}-key-protect"
   resource_group_id = module.resource_group.resource_group_id
-  region            = var.region
+  service           = "kms"
+  plan              = "tiered-pricing"
+  location          = var.region
   tags              = var.resource_tags
 }
 
@@ -26,8 +27,7 @@ module "key_protect_module" {
 ##############################################################################
 
 module "key_protect_key_ring" {
-  source        = "../.."
-  instance_id   = module.key_protect_module.key_protect_guid
-  key_ring_id   = "${var.prefix}-key-ring"
-  endpoint_type = "public"
+  source      = "../.."
+  instance_id = ibm_resource_instance.key_protect_instance.guid
+  key_ring_id = "${var.prefix}-key-ring"
 }

@@ -14,7 +14,12 @@ output "resource_group_id" {
 
 output "key_protect_id" {
   description = "Key Protect Instance ID"
-  value       = module.key_protect_module.key_protect_guid
+  value       = ibm_resource_instance.key_protect_instance.id
+}
+
+output "key_protect_guid" {
+  description = "Key Protect Instance GUID"
+  value       = ibm_resource_instance.key_protect_instance.guid
 }
 
 output "key_protect_key_ring_id" {
