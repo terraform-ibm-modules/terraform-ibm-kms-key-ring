@@ -10,7 +10,7 @@ import (
 
 // Use existing resource group for tests
 const resourceGroup = "geretain-test-key-protect-key-ring"
-const defaultExampleTerraformDir = "examples/default"
+const terraformDir = "examples/default"
 
 func setupOptions(t *testing.T, prefix string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
