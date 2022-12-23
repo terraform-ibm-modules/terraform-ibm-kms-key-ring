@@ -20,7 +20,7 @@ provider "ibm" {
 
 module "key_protect_key_ring" {
   # Replace "main" with a GIT release version to lock into a specific release
-  source        = "git::https://github.com:terraform-ibm-modules/terraform-ibm-key-protect-key-ring.git?ref=main"
+  source        = "git::https://github.com/terraform-ibm-modules/terraform-ibm-key-protect-key-ring.git?ref=main"
   instance_id   = "XXxxXXxx-xxxx-XXXX-xxxx-XXxxXXxx"
   key_ring_id   = "my-key-ring"
 }
