@@ -18,8 +18,8 @@ provider "ibm" {
 }
 
 module "kms_key_ring" {
-  # Replace "main" with a GIT release version to lock into a specific release
-  source        = "git::https://github.com/terraform-ibm-modules/terraform-ibm-kms-key-ring.git?ref=main"
+  source  = "terraform-ibm-modules/kms-key-ring/ibm"
+  version = "latest" # Replace "latest" with a release version to lock into a specific release
   instance_id   = "XXxxXXxx-xxxx-XXXX-xxxx-XXxxXXxx"
   key_ring_id   = "my-key-ring"
 }
