@@ -15,12 +15,12 @@ repository:
   # By changing this field, you rename the repository.
 
   # Uncomment this name property and set the name to the current repo name.
-  name: "terraform-ibm-key-protect-key-ring"
+  name: "terraform-ibm-kms-key-ring"
 
   # The description is displayed under the repository name on the
   # organization page and in the 'About' section of the repository.
 
   # Uncomment this description property
   # and update the description to the current repo description.
-  description: "Module to create Key Rings in a Key Protect instance"
-  topics: core-team, terraform, ibm-cloud, terraform-module, key-protect, kms, key-ring
+  description: "Module to create Key Rings in a KMS instance"
+  topics: core-team, terraform, ibm-cloud, terraform-module, key-protect, kms, key-ring, hpcs

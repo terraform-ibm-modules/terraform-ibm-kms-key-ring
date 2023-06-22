@@ -14,12 +14,12 @@ variable "endpoint_type" {
 
 variable "instance_id" {
   type        = string
-  description = "The Key Protect instance GUID"
+  description = "The KMS instance GUID"
 }
 
 variable "key_ring_id" {
   type        = string
-  description = "The ID that identifies the Key Ring. Each ID is unique within the given Key Protect instance but is not reserved across the Key Protect service"
+  description = "The ID that identifies the Key Ring. Each ID is unique within the given KMS instance but is not reserved across the KMS service"
 
   validation {
     condition     = can(regex("^[a-zA-Z0-9-]{2,100}$", var.key_ring_id))
