@@ -11,7 +11,7 @@ module "resource_group" {
 }
 
 ##############################################################################
-# Key Protect instance
+# KMS(Key Protect) instance
 ##############################################################################
 
 resource "ibm_resource_instance" "key_protect_instance" {
@@ -27,7 +27,7 @@ resource "ibm_resource_instance" "key_protect_instance" {
 # Key Ring module
 ##############################################################################
 
-module "key_protect_key_ring" {
+module "kms_key_ring" {
   source      = "../.."
   instance_id = ibm_resource_instance.key_protect_instance.guid
   key_ring_id = "${var.prefix}-key-ring"
