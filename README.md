@@ -6,7 +6,7 @@
 [![latest release](https://img.shields.io/github/v/release/terraform-ibm-modules/terraform-ibm-kms-key-ring?logo=GitHub&sort=semver)](https://github.com/terraform-ibm-modules/terraform-ibm-kms-key-ring/releases/latest)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
-This module creates a key ring to help organize keys in a KMS instance. KMS can be Key Protect and Hyper Protect Crypto Services(HPCS) instance.
+This module creates a key ring to help organize keys in a KMS instance. KMS can be Key Protect or Hyper Protect Crypto Services(HPCS) instance.
 For more information, about key management rings, see [creating key rings in Key Protect](https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api) and [managing key rings in HPCS](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui).
 
 ## Usage
