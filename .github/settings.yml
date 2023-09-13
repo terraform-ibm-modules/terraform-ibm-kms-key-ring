@@ -23,4 +23,4 @@ repository:
   # Uncomment this description property
   # and update the description to the current repo description.
   description: "Module to create Key Rings in a KMS instance"
-  topics: core-team, terraform, ibm-cloud, terraform-module, key-protect, kms, key-ring, hpcs
+  topics: core-team, terraform, ibm-cloud, terraform-module, key-protect, kms, key-ring, hpcs, supported, graduated
