@@ -16,6 +16,19 @@
       "immutable": true,
       "computed": true
     },
+    "force_delete": {
+      "name": "force_delete",
+      "type": "bool",
+      "description": "Set to `true` if you wish to force delete the kms key rings, else `false`.",
+      "default": true,
+      "source": [
+        "ibm_kms_key_rings.key_ring.force_delete"
+      ],
+      "pos": {
+        "filename": "variables.tf",
+        "line": 20
+      }
+    },
     "instance_id": {
       "name": "instance_id",
       "type": "string",
@@ -44,7 +57,7 @@
       ],
       "pos": {
         "filename": "variables.tf",
-        "line": 20
+        "line": 26
       },
       "immutable": true,
       "min_length": 2,
@@ -71,7 +84,7 @@
     "ibm": {
       "source": "IBM-Cloud/ibm",
       "version_constraints": [
-        "\u003e= 1.49.0"
+        "\u003e= 1.58.0"
       ]
     }
   },
@@ -82,6 +95,7 @@
       "name": "key_ring",
       "attributes": {
         "endpoint_type": "endpoint_type",
+        "force_delete": "force_delete",
         "instance_id": "instance_id",
         "key_ring_id": "key_ring_id"
       },
