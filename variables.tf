@@ -17,6 +17,12 @@ variable "instance_id" {
   description = "The KMS instance GUID"
 }
 
+variable "force_delete" {
+  type        = bool
+  description = "Set to `True` if you wish to force delete the kms `key_ring`."
+  default     = false
+}
+
 variable "key_ring_id" {
   type        = string
   description = "The ID that identifies the Key Ring. Each ID is unique within the given KMS instance but is not reserved across the KMS service"
