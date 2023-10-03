@@ -20,7 +20,7 @@
       "name": "force_delete",
       "type": "bool",
       "description": "Set to `True` if you wish to force delete the kms `key_ring`.",
-      "default": false,
+      "default": true,
       "source": [
         "ibm_kms_key_rings.key_ring.force_delete"
       ],
