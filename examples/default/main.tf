@@ -32,3 +32,15 @@ module "kms_key_ring" {
   instance_id = ibm_resource_instance.key_protect_instance.guid
   key_ring_id = "${var.prefix}-key-ring"
 }
+
+##############################################################################
+# Create Keys in Existing Key Rings
+##############################################################################
+resource "ibm_kms_key" "key" {
+  instance_id   = ibm_resource_instance.key_protect_instance.guid
+  key_name      = "${var.prefix}-key"
+  key_ring_id   = module.kms_key_ring.key_ring_id
+  standard_key  = false
+  endpoint_type = "public"
+  force_delete  = true
+}
