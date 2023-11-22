@@ -14,7 +14,7 @@ import (
 // Use existing resource group for tests
 const resourceGroup = "geretain-test-key-protect-key-ring"
 const defaultExampleTerraformDir = "examples/default"
-const existingKmsExampleTerraformDir = "examples/existing-kms"
+const basicExampleTerraformDir = "examples/basic"
 
 // Define a struct with fields that match the structure of the YAML data
 const yamlLocation = "../common-dev-assets/common-go-assets/common-permanent-resources.yaml"
@@ -53,12 +53,12 @@ func TestRunDefaultExample(t *testing.T) {
 	assert.NotNil(t, output, "Expected some output")
 }
 
-func TestRunExistingKMSExample(t *testing.T) {
+func TestRunBasicExample(t *testing.T) {
 	t.Parallel()
 
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
 		Testing:      t,
-		TerraformDir: existingKmsExampleTerraformDir,
+		TerraformDir: basicExampleTerraformDir,
 		Prefix:       "hpcs",
 		TerraformVars: map[string]interface{}{
 			"existing_kms_instance_guid": permanentResources["hpcs_south"],

@@ -1,8 +1,9 @@
-# End to end example with default values
+# Default example
 
-An end-to-end example that uses the module's default variable values.
-This example will:
- - Create a new resource group (if existing one is not passed in).
- - Create a new KMS (Key Protect) instance in the region and resource group provided.
- - Create a Key Ring within the KMS Instance.
- - Create a Key within the KMS Key Ring and Instance.
+A simple example that shows how to create a key ring in an IBM Key Management Service (KMS) instance.
+
+The following resources are provisioned by this example:
+ - A new resource group, if an existing one is not passed in.
+ - An IBM Key Protect instance.
+ - A key ring in the IBM Key Protect instance.
+ - A key within the key ring.

@@ -41,8 +41,8 @@ You need the following permissions to run this module.
 <!-- BEGIN EXAMPLES HOOK -->
 ## Examples
 
-- [ End to end example with default values](examples/default)
-- [ An example that uses existing KMS](examples/existing-kms)
+- [ Basic example](examples/basic)
+- [ Default example](examples/default)
 <!-- END EXAMPLES HOOK -->
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ### Requirements
