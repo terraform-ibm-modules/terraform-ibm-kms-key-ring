@@ -1,6 +1,6 @@
-# Default example
+# Complete example
 
-A simple example that shows how to create a key ring in an IBM Key Management Service (KMS) instance.
+A complete example showing how to provision a Key Protect instance, a new key ring, and a new key.
 
 The following resources are provisioned by this example:
  - A new resource group, if an existing one is not passed in.

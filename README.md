@@ -42,7 +42,7 @@ You need the following permissions to run this module.
 ## Examples
 
 - [ Basic example](examples/basic)
-- [ Default example](examples/default)
+- [ Complete example](examples/complete)
 <!-- END EXAMPLES HOOK -->
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ### Requirements

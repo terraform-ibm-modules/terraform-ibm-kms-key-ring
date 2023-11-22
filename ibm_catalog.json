@@ -18,12 +18,12 @@
         "encryption"
       ],
       "short_description": "Terraform module to create a key ring in an IBM Key Management Service",
-      "long_description": "Use this module to create a key ring to help organize keys in an IBM Key Management Services (KMS) instance. The KMS can be IBM Key Protect or IBM Cloud Hyper Protect Crypto Services(HPCS) instance. For more information, about key rings, see creating key rings in Key Protect (https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api) instance and managing key rings in HPCS (https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui) instance.\n\n#### Usage\n```hcl\nprovider \"ibm\" {\n  ibmcloud_api_key = \"XXXXXXXXXX\"\n  # Must be the same region the KMS instance is in\n  region           = \"us-south\"\n}\n\nmodule \"kms_key_ring\" {\n  # Replace \"X.X.X\" with a release version to lock into a specific release\n  source  = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source?archive=tgz&kind=terraform&name=terraform-ibm-kms-key-ring&version=X.X.X\"\n  instance_id   = \"XXxxXXxx-xxxx-XXXX-xxxx-XXxxXXxx\"\n  key_ring_id   = \"my-key-ring\"\n}\n```",
+      "long_description": "Use this module to create a key ring to help organize keys in an IBM Key Management Services (KMS) instance. The KMS can be IBM Key Protect or IBM Cloud Hyper Protect Crypto Services(HPCS) instance. For more information, about key rings, see [creating key rings in Key Protect](https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api) and [managing key rings in HPCS](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui).\n\n### Usage\n```hcl\nprovider \"ibm\" {\n  ibmcloud_api_key = \"XXXXXXXXXX\"\n  # Must be the same region the KMS instance is in\n  region           = \"us-south\"\n}\n\nmodule \"kms_key_ring\" {\n  # Replace \"X.X.X\" with a release version to lock into a specific release\n  source  = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source?archive=tgz&kind=terraform&name=terraform-ibm-kms-key-ring&version=X.X.X\"\n  instance_id   = \"XXxxXXxx-xxxx-XXXX-xxxx-XXxxXXxx\"\n  key_ring_id   = \"my-key-ring\"\n}\n```",
       "offering_docs_url": "https://github.com/terraform-ibm-modules/terraform-ibm-key-protect/blob/main/README.md",
       "offering_icon_url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/key_protect_icon.svg",
       "features": [
         {
-          "title": "Create a key ring",
+          "title": "Create a KMS key ring",
           "description": "Create a key ring in an IBM Key Management Service (KMS) instance."
         }
       ],
@@ -41,6 +41,23 @@
                   "type": "image/svg+xml"
                 },
                 "description": "A simple example that shows how to create a key ring in an existing IBM Hyper Protect Crypto Service (HPCS) instance."
+              }
+            ]
+          }
+        },
+        {
+          "label": "Complete",
+          "name": "complete",
+          "working_directory": "examples/complete",
+          "architecture": {
+            "diagrams": [
+              {
+                "diagram": {
+                  "caption": "Complete example",
+                  "url": "https://raw.githubusercontent.com/terraform-ibm-modules/documentation/main/icons/ModuleExampleDiagram.svg",
+                  "type": "image/svg+xml"
+                },
+                "description": "A complete example showing how to provision a Key Protect instance, a new key ring, and a new key."
               }
             ]
           }

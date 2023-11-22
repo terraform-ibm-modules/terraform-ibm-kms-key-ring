@@ -13,7 +13,7 @@ import (
 
 // Use existing resource group for tests
 const resourceGroup = "geretain-test-key-protect-key-ring"
-const defaultExampleTerraformDir = "examples/default"
+const completeExampleTerraformDir = "examples/complete"
 const basicExampleTerraformDir = "examples/basic"
 
 // Define a struct with fields that match the structure of the YAML data
@@ -36,7 +36,7 @@ func TestMain(m *testing.M) {
 func setupOptions(t *testing.T, prefix string) *testhelper.TestOptions {
 	options := testhelper.TestOptionsDefaultWithVars(&testhelper.TestOptions{
 		Testing:       t,
-		TerraformDir:  defaultExampleTerraformDir,
+		TerraformDir:  completeExampleTerraformDir,
 		Prefix:        prefix,
 		ResourceGroup: resourceGroup,
 	})
@@ -44,7 +44,7 @@ func setupOptions(t *testing.T, prefix string) *testhelper.TestOptions {
 	return options
 }
 
-func TestRunDefaultExample(t *testing.T) {
+func TestRunCompleteExample(t *testing.T) {
 	t.Parallel()
 
 	options := setupOptions(t, "kms-key-ring")
@@ -70,7 +70,7 @@ func TestRunBasicExample(t *testing.T) {
 	assert.NotNil(t, output, "Expected some output")
 }
 
-func TestRunUpgrade(t *testing.T) {
+func TestRunCompleteExampleUpgrade(t *testing.T) {
 	t.Parallel()
 
 	options := setupOptions(t, "kms-key-ring-upg")
