@@ -14,12 +14,12 @@ module "resource_group" {
 # KMS(Key Protect) instance
 ##############################################################################
 
-resource "ibm_resource_instance" "key_protect_instance" {
-  name              = "${var.prefix}-key-protect"
+module "key_protect" {
+  source            = "terraform-ibm-modules/key-protect/ibm"
+  version           = "2.4.1"
+  key_protect_name  = "${var.prefix}-kp"
   resource_group_id = module.resource_group.resource_group_id
-  service           = "kms"
-  plan              = "tiered-pricing"
-  location          = var.region
+  region            = var.region
   tags              = var.resource_tags
 }
 
@@ -29,15 +29,16 @@ resource "ibm_resource_instance" "key_protect_instance" {
 
 module "kms_key_ring" {
   source      = "../.."
-  instance_id = ibm_resource_instance.key_protect_instance.guid
+  instance_id = module.key_protect.key_protect_guid
   key_ring_id = "${var.prefix}-key-ring"
 }
 
 ##############################################################################
 # Create Keys in Existing Key Rings
 ##############################################################################
+
 resource "ibm_kms_key" "key" {
-  instance_id   = ibm_resource_instance.key_protect_instance.guid
+  instance_id   = module.key_protect.key_protect_guid
   key_name      = "${var.prefix}-key"
   key_ring_id   = module.kms_key_ring.key_ring_id
   standard_key  = false
