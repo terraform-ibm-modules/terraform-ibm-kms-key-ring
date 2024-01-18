@@ -14,12 +14,12 @@ output "resource_group_id" {
 
 output "kms_id" {
   description = "KMS Instance ID"
-  value       = ibm_resource_instance.key_protect_instance.id
+  value       = module.key_protect.key_protect_id
 }
 
 output "kms_guid" {
   description = "KMS Instance GUID"
-  value       = ibm_resource_instance.key_protect_instance.guid
+  value       = module.key_protect.key_protect_guid
 }
 
 output "kms_key_ring_id" {
