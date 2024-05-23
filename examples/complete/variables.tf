@@ -27,3 +27,9 @@ variable "resource_tags" {
   description = "Optional list of tags to be added to created resources"
   default     = []
 }
+
+variable "force_delete" {
+  type        = bool
+  description = "Set to `true` if you wish to force delete the kms key rings, else `false`."
+  default     = false
+}

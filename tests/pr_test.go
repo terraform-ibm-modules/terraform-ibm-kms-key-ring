@@ -47,7 +47,15 @@ func setupOptions(t *testing.T, prefix string) *testhelper.TestOptions {
 func TestRunCompleteExample(t *testing.T) {
 	t.Parallel()
 
-	options := setupOptions(t, "kms-key-ring")
+	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
+		Testing:       t,
+		TerraformDir:  completeExampleTerraformDir,
+		Prefix:        "kms-key-ring",
+		ResourceGroup: resourceGroup,
+		TerraformVars: map[string]interface{}{
+			"force_delete": true,
+		},
+	})
 	output, err := options.RunTestConsistency()
 	assert.Nil(t, err, "This should not have errored")
 	assert.NotNil(t, output, "Expected some output")

@@ -43,5 +43,5 @@ resource "ibm_kms_key" "key" {
   key_ring_id   = module.kms_key_ring.key_ring_id
   standard_key  = false
   endpoint_type = "public"
-  force_delete  = true
+  force_delete  = var.force_delete
 }
