@@ -20,7 +20,7 @@ variable "instance_id" {
 variable "force_delete" {
   type        = bool
   description = "Set to `true` if you wish to force delete the kms key rings, else `false`."
-  default     = true
+  default     = false
 }
 
 variable "key_ring_id" {
