@@ -15,9 +15,3 @@ variable "existing_kms_instance_guid" {
   description = "GUID of an existing KMS instance."
   default     = null
 }
-
-variable "force_delete" {
-  type        = bool
-  description = "Set to `true` if you wish to force delete the kms key rings, else `false`."
-  default     = false
-}
