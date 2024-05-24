@@ -62,7 +62,6 @@ func TestRunBasicExample(t *testing.T) {
 		Prefix:       "hpcs",
 		TerraformVars: map[string]interface{}{
 			"existing_kms_instance_guid": permanentResources["hpcs_south"],
-			"force_delete":               true,
 		},
 	})
 
