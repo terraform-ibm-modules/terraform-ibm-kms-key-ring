@@ -67,7 +67,6 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The type of endpoint to be used for creating keys. Accepts 'public' or 'private' | `string` | `"public"` | no |
-| <a name="input_force_delete"></a> [force\_delete](#input\_force\_delete) | Set to `true` if you wish to force delete the kms key rings, else `false`. | `bool` | `false` | no |
 | <a name="input_instance_id"></a> [instance\_id](#input\_instance\_id) | The KMS instance GUID | `string` | n/a | yes |
 | <a name="input_key_ring_id"></a> [key\_ring\_id](#input\_key\_ring\_id) | The ID that identifies the Key Ring. Each ID is unique within the given KMS instance but is not reserved across the KMS service | `string` | n/a | yes |
 
