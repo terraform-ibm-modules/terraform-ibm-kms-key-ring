@@ -9,7 +9,9 @@
 This module creates a key ring to help organize keys in a KMS instance. KMS can be Key Protect or Hyper Protect Crypto Services(HPCS) instance.
 For more information, about key management rings, see [creating key rings in Key Protect](https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api) and [managing key rings in HPCS](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui).
 
-## Usage
+## terraform-ibm-kms-key-ring
+
+### Usage
 ```hcl
 provider "ibm" {
   ibmcloud_api_key = "XXXXXXXXXX"
