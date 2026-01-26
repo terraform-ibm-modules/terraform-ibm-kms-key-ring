@@ -9,6 +9,16 @@
 This module creates a key ring to help organize keys in a KMS instance. KMS can be Key Protect or Hyper Protect Crypto Services(HPCS) instance.
 For more information, about key management rings, see [creating key rings in Key Protect](https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api) and [managing key rings in HPCS](https://cloud.ibm.com/docs/hs-crypto?topic=hs-crypto-managing-key-rings&interface=ui).
 
+<!-- BEGIN OVERVIEW HOOK -->
+## Overview
+* [terraform-ibm-kms-key-ring](#terraform-ibm-kms-key-ring)
+* [Examples](./examples)
+:information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
+    * <a href="./examples/basic">Basic example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=kms-key-ring-basic-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-kms-key-ring/tree/main/examples/basic"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+    * <a href="./examples/complete">Complete example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=kms-key-ring-complete-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-kms-key-ring/tree/main/examples/complete"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
+* [Contributing](#contributing)
+<!-- END OVERVIEW HOOK -->
+
 ## terraform-ibm-kms-key-ring
 
 ### Usage
@@ -40,15 +50,6 @@ You need the following permissions to run this module.
 
 
 <!-- END MODULE HOOK -->
-<!-- BEGIN OVERVIEW HOOK -->
-## Overview
-* [terraform-ibm-kms-key-ring](#terraform-ibm-kms-key-ring)
-* [Examples](./examples)
-:information_source: Ctrl/Cmd+Click or right-click on the Schematics deploy button to open in a new tab
-    * <a href="./examples/basic">Basic example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=kms-key-ring-basic-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-kms-key-ring/tree/main/examples/basic"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-    * <a href="./examples/complete">Complete example</a> <a href="https://cloud.ibm.com/schematics/workspaces/create?workspace_name=kms-key-ring-complete-example&repository=https://github.com/terraform-ibm-modules/terraform-ibm-kms-key-ring/tree/main/examples/complete"><img src="https://img.shields.io/badge/Deploy%20with IBM%20Cloud%20Schematics-0f62fe?logo=ibm&logoColor=white&labelColor=0f62fe" alt="Deploy with IBM Cloud Schematics" style="height: 16px; vertical-align: text-bottom; margin-left: 5px;"></a>
-* [Contributing](#contributing)
-<!-- END OVERVIEW HOOK -->
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ### Requirements
 
