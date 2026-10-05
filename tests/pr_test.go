@@ -59,9 +59,9 @@ func TestRunBasicExample(t *testing.T) {
 	options := testhelper.TestOptionsDefault(&testhelper.TestOptions{
 		Testing:      t,
 		TerraformDir: basicExampleTerraformDir,
-		Prefix:       "hpcs",
+		Prefix:       "kms",
 		TerraformVars: map[string]interface{}{
-			"existing_kms_instance_guid": permanentResources["hpcs_south"],
+			"existing_kms_instance_guid": permanentResources["kp_dedicated_us_south_instance_id"],
 		},
 	})
 
