@@ -66,7 +66,7 @@ You need the following permissions to run this module.
 ### Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
 | <a name="requirement_ibm"></a> [ibm](#requirement\_ibm) | >= 1.69.0, < 3.0.0 |
 
@@ -77,13 +77,13 @@ No modules.
 ### Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [ibm_kms_key_rings.key_ring](https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/kms_key_rings) | resource |
 
 ### Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_endpoint_type"></a> [endpoint\_type](#input\_endpoint\_type) | The type of endpoint to be used for creating keys. Accepts 'public' or 'private' | `string` | `"public"` | no |
 | <a name="input_instance_id"></a> [instance\_id](#input\_instance\_id) | The KMS instance GUID | `string` | n/a | yes |
 | <a name="input_key_ring_id"></a> [key\_ring\_id](#input\_key\_ring\_id) | The ID that identifies the Key Ring. Each ID is unique within the given KMS instance but is not reserved across the KMS service | `string` | n/a | yes |
@@ -91,7 +91,7 @@ No modules.
 ### Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_key_ring_id"></a> [key\_ring\_id](#output\_key\_ring\_id) | ID of the Key Ring |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 <!-- BEGIN CONTRIBUTING HOOK -->
