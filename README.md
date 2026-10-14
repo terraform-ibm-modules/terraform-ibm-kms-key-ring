@@ -7,7 +7,7 @@
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 [![Terraform Registry](https://img.shields.io/badge/terraform-registry-623CE4?logo=terraform)](https://registry.terraform.io/modules/terraform-ibm-modules/kms-key-ring/ibm/latest)
 
-This module creates a key ring to help organize keys in a KMS instance. KMS can be Key Protect instance.
+This module creates a key ring to help organize keys in a Key Protect instance.
 For more information, about key management rings, see [creating key rings in Key Protect](https://cloud.ibm.com/docs/key-protect?topic=key-protect-grouping-keys#create-key-ring-api).
 
 <!-- BEGIN OVERVIEW HOOK -->
