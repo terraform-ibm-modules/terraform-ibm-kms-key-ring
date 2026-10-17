@@ -61,7 +61,7 @@ func TestRunBasicExample(t *testing.T) {
 		TerraformDir: basicExampleTerraformDir,
 		Prefix:       "hpcs",
 		TerraformVars: map[string]interface{}{
-			"existing_kms_instance_guid": permanentResources["hpcs_south"],
+			"existing_kms_instance_guid": permanentResources["hpcs_eufr2"],
 		},
 	})
 
