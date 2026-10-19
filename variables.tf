@@ -14,7 +14,7 @@ variable "endpoint_type" {
 
 variable "instance_id" {
   type        = string
-  description = "The KMS instance GUID"
+  description = "The Key Protect instance GUID"
 }
 
 variable "key_ring_id" {

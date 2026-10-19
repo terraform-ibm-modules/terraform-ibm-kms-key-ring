@@ -12,6 +12,6 @@ variable "prefix" {
 
 variable "existing_kms_instance_guid" {
   type        = string
-  description = "GUID of an existing KMS instance."
+  description = "GUID of an existing Key Protect instance."
   default     = null
 }
